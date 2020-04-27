@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'picturefill';
+import StoreProvider from 'store';
+import App from 'containers/App';
+import 'normalize.css/normalize.css';
 import './index.css';
-import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+   <StoreProvider>
+      <App />
+   </StoreProvider>,
+   document.getElementById('root'),
+);
