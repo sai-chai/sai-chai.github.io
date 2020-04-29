@@ -9,5 +9,5 @@ const StoreProvider = props => {
    );
 };
 
-export { useEnv };
-export default StoreProvider;
+export { StoreProvider };
+export default useEnv;

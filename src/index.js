@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'picturefill';
-import StoreProvider from 'store';
 import App from 'containers/App';
 import 'normalize.css/normalize.css';
 import './index.css';
+import { CloudimageProvider } from 'react-cloudimage-responsive';
+
+const cloudimageConfig = {
+   token: process.env.REACT_APP_CLOUDIMAGE_TOKEN,
+   baseURL: process.env.REACT_APP_IMAGE_URL,
+};
 
 ReactDOM.render(
-   <StoreProvider>
+   <CloudimageProvider config={cloudimageConfig}>
       <App />
-   </StoreProvider>,
+   </CloudimageProvider>,
    document.getElementById('root'),
 );

@@ -1,31 +1,12 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { useEnv } from 'store';
+import Img from 'react-cloudimage-responsive';
 
 function App() {
-   const env = useEnv();
-
    return (
       <Container>
          <Header>
-            <picture>
-               <source
-                  media="(max-width: 767px)"
-                  srcSet={`${env.IMAGES}/profile-m.png`}
-               />
-               <source
-                  media="(max-width: 1024px)"
-                  srcSet={`${env.IMAGES}/profile-t.png`}
-               />
-               <source
-                  media="(min-width: 1025px)"
-                  srcSet={`${env.IMAGES}/profile-d.png`}
-               />
-               <img
-                  src={`${env.IMAGES}/profile-d.png`}
-                  alt="Sai Chimata portrait"
-               />
-            </picture>
+            <Img src="profile.png" alt="Sai Chimata portrait" ratio={1} />
             <p>*insert early '00s "under construction" gif*</p>
          </Header>
       </Container>
