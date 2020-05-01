@@ -6,7 +6,9 @@ function App() {
    return (
       <Container>
          <Header>
-            <Img src="profile.png" alt="Sai Chimata portrait" ratio={1} />
+            <Jumbotron>
+               <Img src="profile.png" alt="Sai Chimata portrait" ratio={1} />
+            </Jumbotron>
             <p>*insert early '00s "under construction" gif*</p>
          </Header>
       </Container>
@@ -15,6 +17,10 @@ function App() {
 
 const Container = styled.div`
    text-align: center;
+`;
+
+const Jumbotron = styled.div`
+   width: 30vw;
 `;
 
 const Header = styled.header`

@@ -24,3 +24,5 @@ yarn-error.log*
 
 # for staging assets
 /assets
+
+/scratch_pad

@@ -21,15 +21,30 @@
       "styled-components": "^5.1.0"
    },
    "devDependencies": {
-      "@testing-library/jest-dom": "^4.2.4",
+      "@testing-library/jest-dom": "^5.5.0",
       "@testing-library/react": "^9.5.0",
       "@testing-library/user-event": "^7.2.1",
+      "eslint-plugin-jest-dom": "^2.1.0",
+      "eslint-plugin-testing-library": "^3.0.4",
       "gh-pages": "^2.1.1",
       "jest-styled-components": "^7.0.2",
       "react-lazyload": "^2.6.7"
    },
    "eslintConfig": {
-      "extends": "react-app",
+      "plugins": [
+         "react",
+         "testing-library",
+         "jest-dom"
+      ],
+      "extends": [
+         "react-app",
+         "plugin:testing-library/react",
+         "plugin:jest-dom/recommended"
+      ],
+      "ignorePatterns": [
+         "node_modules/",
+         "scratch_pad/"
+      ],
       "rules": {
          "quotes": [
             "error",
@@ -60,10 +75,7 @@
             "error",
             "always-multiline"
          ]
-      },
-      "plugins": [
-         "react"
-      ]
+      }
    },
    "browserslist": {
       "production": [
