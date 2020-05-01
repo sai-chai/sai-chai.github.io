@@ -13,7 +13,6 @@
    },
    "dependencies": {
       "normalize.css": "^8.0.1",
-      "picturefill": "^3.0.3",
       "react": "^16.12.0",
       "react-cloudimage-responsive": "^3.2.4",
       "react-dom": "^16.12.0",
@@ -53,6 +52,14 @@
                "avoidEscape": true
             }
          ],
+         "indent": [
+            "error",
+            3
+         ],
+         "comma-dangle": [
+            "error",
+            "always-multiline"
+         ],
          "no-restricted-imports": [
             "error",
             {
@@ -66,14 +73,6 @@
                   "!styled-components/macro"
                ]
             }
-         ],
-         "indent": [
-            "error",
-            3
-         ],
-         "comma-dangle": [
-            "error",
-            "always-multiline"
          ]
       }
    },
