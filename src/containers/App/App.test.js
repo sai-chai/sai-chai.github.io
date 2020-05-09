@@ -10,7 +10,7 @@ describe('<App />', () => {
             <App />
          </CloudimageProvider>,
       );
-      const linkElement = getByText(/under construction/i);
+      const linkElement = getByText(/Front-end Engineer/i);
       expect(linkElement).toBeInTheDocument();
    });
 });
