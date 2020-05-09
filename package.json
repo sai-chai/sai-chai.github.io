@@ -1,40 +1,92 @@
 {
-  "name": "sai-chai.github.io",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "http://sai-chai.github.io",
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "gh-pages": "^2.1.1"
-  }
+   "name": "sai-chai.github.io",
+   "version": "0.1.0",
+   "private": true,
+   "homepage": "http://sai-chai.github.io",
+   "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -b master -d build"
+   },
+   "dependencies": {
+      "normalize.css": "^8.0.1",
+      "react": "^16.12.0",
+      "react-cloudimage-responsive": "^3.2.4",
+      "react-dom": "^16.12.0",
+      "react-router-dom": "^5.1.2",
+      "react-scripts": "3.4.1",
+      "styled-components": "^5.1.0"
+   },
+   "devDependencies": {
+      "@testing-library/jest-dom": "^5.5.0",
+      "@testing-library/react": "^9.5.0",
+      "@testing-library/user-event": "^7.2.1",
+      "eslint-plugin-jest-dom": "^2.1.0",
+      "eslint-plugin-testing-library": "^3.0.4",
+      "gh-pages": "^2.1.1",
+      "jest-styled-components": "^7.0.2",
+      "react-lazyload": "^2.6.7"
+   },
+   "eslintConfig": {
+      "plugins": [
+         "react",
+         "testing-library",
+         "jest-dom"
+      ],
+      "extends": [
+         "react-app",
+         "plugin:testing-library/react",
+         "plugin:jest-dom/recommended"
+      ],
+      "ignorePatterns": [
+         "node_modules/",
+         "scratch_pad/"
+      ],
+      "rules": {
+         "quotes": [
+            "error",
+            "single",
+            {
+               "avoidEscape": true
+            }
+         ],
+         "indent": [
+            "error",
+            3
+         ],
+         "comma-dangle": [
+            "error",
+            "always-multiline"
+         ],
+         "no-restricted-imports": [
+            "error",
+            {
+               "paths": [
+                  {
+                     "name": "styled-components",
+                     "message": "Please import from styled-components/macro."
+                  }
+               ],
+               "patterns": [
+                  "!styled-components/macro"
+               ]
+            }
+         ]
+      }
+   },
+   "browserslist": {
+      "production": [
+         ">0.2%",
+         "not dead",
+         "not op_mini all"
+      ],
+      "development": [
+         "last 1 chrome version",
+         "last 1 firefox version",
+         "last 1 safari version"
+      ]
+   }
 }

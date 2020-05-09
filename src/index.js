@@ -1,12 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from 'containers/App';
+import { breakpoints } from 'styles/breakpoints';
+import 'normalize.css/normalize.css';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { CloudimageProvider } from 'react-cloudimage-responsive';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const cloudimageConfig = {
+   token: process.env.REACT_APP_CLOUDIMAGE_TOKEN,
+   baseURL: process.env.REACT_APP_IMAGE_URL,
+   presets: {
+      xs: `(max-width: ${breakpoints.small - 1}px)`,
+      sm: `(min-width: ${breakpoints.small}px)`,
+      md: `(min-width: ${breakpoints.medium}px)`,
+      lg: `(min-width: ${breakpoints.large}px)`,
+      xl: `(min-width: ${breakpoints.xLarge}px)`,
+   },
+   params: {
+      sharp: 1,
+      org_if_sml: 1,
+   },
+   placeholderBackground: 'none',
+   lowQualityPreview: {
+      minImgWidth: 10000,
+   },
+};
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+   <CloudimageProvider config={cloudimageConfig}>
+      <App />
+   </CloudimageProvider>,
+   document.getElementById('root'),
+);
