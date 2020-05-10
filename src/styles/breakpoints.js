@@ -16,7 +16,7 @@ const breakpoints = {
 };
 
 /**
- * @description Standard responsive mixin factory for styled-components
+ * @description Standard responsive mixin factory for styled-components, adapted from:
  * @author Tobias Lindström (gunnarx2)
  * @source [link](https://tobbelindstrom.com/blog/how-to-create-a-breakpoint-mixin-with-styled-components/)
  */
