@@ -22,8 +22,9 @@ const cloudimageConfig = {
    },
    placeholderBackground: 'none',
    lowQualityPreview: {
-      minImgWidth: 10000,
+      minImgWidth: 600,
    },
+   limitFactor: 50,
 };
 
 ReactDOM.render(
