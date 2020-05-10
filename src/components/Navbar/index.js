@@ -5,10 +5,10 @@ import useMedia from 'utils/useMedia';
 import { breakpoints } from 'styles/breakpoints';
 
 function Navbar(props) {
-   const gtMedium = useMedia(`(min-width: ${breakpoints.medium}px)`);
-   console.log(gtMedium);
+   const atLeastMedium = useMedia(`(min-width: ${breakpoints.medium}px)`);
+
    return (
-      <BackgroundImg src="Lift_crop.jpg" params={gtMedium && 'gravity=east&tl_px=0,330'}>
+      <BackgroundImg src="Lift_crop.jpg" params={atLeastMedium && 'gravity=east&tl_px=0,330'}>
          <Container>
 
          </Container>
